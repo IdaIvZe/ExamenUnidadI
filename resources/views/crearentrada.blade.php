@@ -43,16 +43,18 @@
                             <h3 class="card-header">Crear Nueva Entrada Directorio</h3>
                             <div class="card-body">
                                 <p class="card-text">
-                                    <form>
-                                        <label for="">Codigo</label>
+                                    <form action="{{route('directorio.agregarNuevo.guardar')}}" method="POST">
+                                        @csrf
+                                        @method('POST')
+                                        <label for="">{{$nvaEntrada->codigoEntrada}}</label>
                                         <input type="text" name="codigo" class="form-control">
-                                        <label for="">Nombre</label>
+                                        <label for="">{{$nvaEntrada->nombre}}</label>
                                         <input type="text" name="nombre" class="form-control">
-                                        <label for="">Apellido</label>
+                                        <label for="">{{$nvaEntrada->apellido}}</label>
                                         <input type="text" name="apellido" class="form-control">
-                                        <label for="">Tel&eacute;fono</label>
+                                        <label for="">{{$nvaEntrada->telefono}}</label>
                                         <input type="text" name="telefono" class="form-control">
-                                        <label for="">Correo</label>
+                                        <label for="">{{$nvaEntrada->correo}}</label>
                                         <input type="text" name="correo" class="form-control">
                                         
                                         

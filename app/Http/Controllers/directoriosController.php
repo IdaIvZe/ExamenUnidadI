@@ -47,4 +47,14 @@ class directoriosController extends Controller
     public function cancelarBusqueda(){
         return redirect()->route('directorio.principal');
     }
+
+    public function guardarNuevoDirectorio(Request $request){
+        $nvaEntrada = new directorio();
+        $nvaEntrada->codigoEntrada = $request->codigo;
+        $nvaEntrada->nombre = $request->nombre;
+        $nvaEntrada->apellido = $request->apellido;
+        $nvaEntrada->telefono = $request->telefono;
+        $nvaEntrada->correo = $request->correo;
+        $nvaEntrada->save();
+    }
 }
