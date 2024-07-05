@@ -34,5 +34,9 @@ Route::get('/directorio/eliminar/cancelar',
 Route::get('/directorio/buscar/regresar',
             [directoriosController::class, 'cancelarBusqueda'])->name('directorio.buscar.regresar');
 
-Route::get('/directorio/agregar/nuevo/guardar',
+Route::post('/directorio/agregar/nuevo/guardar',
             [directoriosController::class, 'guardarNuevoDirectorio'])->name('directorio.agregarNuevo.guardar');
+
+Route::get('/directorio/agregar/nuevo/regresar',
+            [directoriosController::class, 'nuevoDirectorioRegresar'])->name('directorio.agregarNuevo.regresar');
+

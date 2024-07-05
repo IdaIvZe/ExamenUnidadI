@@ -56,5 +56,11 @@ class directoriosController extends Controller
         $nvaEntrada->telefono = $request->telefono;
         $nvaEntrada->correo = $request->correo;
         $nvaEntrada->save();
+
+        return redirect()->route('directorio.principal');
+    }
+
+    public function nuevoDirectorioRegresar(){
+        return redirect()->route('directorio.principal');
     }
 }

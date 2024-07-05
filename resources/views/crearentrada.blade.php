@@ -46,20 +46,20 @@
                                     <form action="{{route('directorio.agregarNuevo.guardar')}}" method="POST">
                                         @csrf
                                         @method('POST')
-                                        <label for="">{{$nvaEntrada->codigoEntrada}}</label>
+                                        <label for="">Codigo</label>
                                         <input type="text" name="codigo" class="form-control">
-                                        <label for="">{{$nvaEntrada->nombre}}</label>
+                                        <label for="">Nombre</label>
                                         <input type="text" name="nombre" class="form-control">
-                                        <label for="">{{$nvaEntrada->apellido}}</label>
+                                        <label for="">Apellido</label>
                                         <input type="text" name="apellido" class="form-control">
-                                        <label for="">{{$nvaEntrada->telefono}}</label>
+                                        <label for="">Tel&eacute;fono</label>
                                         <input type="text" name="telefono" class="form-control">
-                                        <label for="">{{$nvaEntrada->correo}}</label>
+                                        <label for="">Correo</label>
                                         <input type="text" name="correo" class="form-control">
                                         
                                         
                                         <button class="btn btn-primary">Guardar</button>
-                                        <a href="#" class="btn btn-info">Regresar</a>
+                                        <a href="{{route('directorio.agregarNuevo.regresar')}}" class="btn btn-info">Regresar</a>
                                         
                                     </form>
                                 </p>
